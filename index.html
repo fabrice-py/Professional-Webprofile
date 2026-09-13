@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Fabrice TSAMO – Ingénieur procédés | Valorisation des matières premières secondaires</title>
+  <meta name="description" data-i18n-content="meta.description"
+        content="Fabrice TSAMO, ingénieur des mines et géométallurgiste : traitement des minerais, hydrométallurgie, valorisation des ressources secondaires, caractérisation de déchets, modélisation Python et cartographie SIG.">
+  <meta name="author" content="Fabrice TSAMO">
+  <meta property="og:title" content="Fabrice TSAMO – Ingénieur procédés">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/portrait.jpg">
+
+  <!-- Favicon (remplacer par images/favicon.png si souhaité) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='white'%3EFT%3C/text%3E%3C/svg%3E">
+
+  <!-- Polices & icônes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Feuille de style du site -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     EN-TÊTE / NAVIGATION
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#accueil" class="brand" aria-label="Accueil">
+      <span class="brand-mark">FT</span>
+      <span class="brand-text">Fabrice <strong>TSAMO</strong></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+      <a href="#accueil" data-i18n="nav.home">Accueil</a>
+      <a href="#profil" data-i18n="nav.profile">Profil</a>
+      <a href="#experiences" data-i18n="nav.experience">Expériences</a>
+      <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#galerie" data-i18n="nav.gallery">Galerie</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#formation" data-i18n="nav.education">Formation</a>
+      <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-tools">
+      <!-- Sélecteur de langue -->
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep">|</span>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <!-- Menu mobile -->
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     1. ACCUEIL / PRÉSENTATION
+     ============================================================ -->
+<section id="accueil" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-content reveal">
+      <p class="hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
+      <h1 class="hero-name">Fabrice <span>TSAMO</span></h1>
+      <h2 class="hero-title" data-i18n="hero.title">Ingénieur procédés – Valorisation des matières premières secondaires</h2>
+      <p class="hero-tagline" data-i18n="hero.tagline">
+        Ingénieur des mines et géométallurgiste, je conçois, teste et modélise des procédés de traitement des minerais
+        et de valorisation des ressources secondaires. Du laboratoire à l'échelle pilote, de l'échantillon au simulateur,
+        je transforme la donnée expérimentale en décisions de procédé.
+      </p>
+
+      <ul class="chips" aria-label="Domaines d'expertise">
+        <li><i class="fa-solid fa-gem"></i><span data-i18n="hero.chip1">Géométallurgie</span></li>
+        <li><i class="fa-solid fa-flask"></i><span data-i18n="hero.chip2">Hydrométallurgie</span></li>
+        <li><i class="fa-solid fa-mountain"></i><span data-i18n="hero.chip3">Traitement des minerais</span></li>
+        <li><i class="fa-solid fa-recycle"></i><span data-i18n="hero.chip4">Caractérisation de déchets</span></li>
+        <li><i class="fa-solid fa-diagram-project"></i><span data-i18n="hero.chip5">Modélisation</span></li>
+        <li><i class="fa-brands fa-python"></i><span data-i18n="hero.chip6">Python</span></li>
+        <li><i class="fa-solid fa-map-location-dot"></i><span data-i18n="hero.chip7">Cartographie SIG</span></li>
+      </ul>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="hero.cta_contact">Me contacter</span></a>
+        <a href="#projets" class="btn btn-outline"><i class="fa-solid fa-chart-line"></i> <span data-i18n="hero.cta_projects">Voir mes projets</span></a>
+        <!-- CV : déposer le fichier PDF dans le dossier cv/ -->
+        <a href="cv/CV_Fabrice_TSAMO.pdf" class="btn btn-ghost" download><i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="hero.cta_cv">Télécharger mon CV</span></a>
+      </div>
+
+      <div class="hero-social">
+        <!-- MODIFIER : liens LinkedIn / GitHub / email -->
+        <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/fabrice-py" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:votre.email@exemple.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal reveal-delay">
+      <div class="photo-frame">
+        <!-- PHOTO PORTRAIT : remplacer images/portrait.jpg (format carré ou 4:5 conseillé, ≥ 800 px) -->
+        <img src="images/portrait.jpg" alt="Portrait de Fabrice TSAMO" width="420" height="520">
+        <span class="photo-badge"><i class="fa-solid fa-microscope"></i> <span data-i18n="hero.badge">Du laboratoire au pilote</span></span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#profil" class="scroll-hint" aria-label="Défiler">
+    <span data-i18n="hero.scroll">Découvrir</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============================================================
+     2. PROFIL PROFESSIONNEL
+     ============================================================ -->
+<section id="profil" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="profile.label">Profil professionnel</span>
+      <h2 class="section-title" data-i18n="profile.title">Ingénieur des mines &amp; géométallurgiste</h2>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-text reveal">
+        <p data-i18n="profile.p1">
+          Ingénieur des mines diplômé de l'ENSP Bamenda et titulaire d'un Master Georessources Engineering de l'ENSG Nancy,
+          je suis spécialisé dans le traitement, la séparation et la valorisation des ressources minérales et secondaires.
+          Mon approche géométallurgique relie la caractérisation de la matière (minéralogie, granulométrie, chimie) à la
+          performance des procédés de concentration et d'extraction.
+        </p>
+        <p data-i18n="profile.p2">
+          Mon expérience couvre l'ensemble de la chaîne expérimentale, du laboratoire au pilote : préparation d'échantillons,
+          essais de séparation gravimétrique et magnétique, hydrométallurgie, puis exploitation et modélisation des résultats.
+          J'ai développé un simulateur géométallurgique en Python permettant de modéliser des opérations de séparation et des
+          circuits de traitement complets, et j'ai construit un jumeau numérique de centre de tri de déchets d'équipements
+          électriques et électroniques (DEEE) sous MATLAB/Simulink.
+        </p>
+        <p data-i18n="profile.p3">
+          Également géomaticien cartographe, je mobilise les outils SIG (QGIS, ArcGIS, web mapping) pour structurer et
+          analyser les données terrain, qu'il s'agisse de campagnes de caractérisation de déchets ou de cartographie de
+          gisements. Cette double compétence procédés / données me permet d'aborder les problématiques de valorisation
+          avec une vision à la fois opérationnelle et quantitative.
+        </p>
+      </div>
+
+      <ul class="highlights reveal reveal-delay">
+        <li><i class="fa-solid fa-helmet-safety"></i><span data-i18n="profile.h1">Ingénieur des mines</span></li>
+        <li><i class="fa-solid fa-gem"></i><span data-i18n="profile.h2">Géométallurgiste</span></li>
+        <li><i class="fa-solid fa-filter"></i><span data-i18n="profile.h3">Traitement, séparation et valorisation des ressources minérales et secondaires</span></li>
+        <li><i class="fa-solid fa-vial-circle-check"></i><span data-i18n="profile.h4">Expérience du laboratoire au pilote</span></li>
+        <li><i class="fa-brands fa-python"></i><span data-i18n="profile.h5">Simulateur géométallurgique développé en Python</span></li>
+        <li><i class="fa-solid fa-diagram-project"></i><span data-i18n="profile.h6">Modélisation de circuits de traitement</span></li>
+        <li><i class="fa-solid fa-recycle"></i><span data-i18n="profile.h7">Caractérisation de déchets et modélisation d'un centre de tri DEEE</span></li>
+        <li><i class="fa-solid fa-map"></i><span data-i18n="profile.h8">Géomaticien cartographe</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. EXPÉRIENCES PROFESSIONNELLES
+     ============================================================ -->
+<section id="experiences" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="exp.label">Expériences professionnelles</span>
+      <h2 class="section-title" data-i18n="exp.title">Un parcours du terrain au laboratoire</h2>
+      <p class="section-intro" data-i18n="exp.intro">
+        Des campagnes de caractérisation aux essais métallurgiques, chaque expérience a renforcé une même conviction :
+        la qualité d'un procédé se construit sur la qualité de la donnée.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Expérience 1 : OPTAE France -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><i class="fa-solid fa-recycle"></i></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-period" data-i18n="exp1.period">2026</span>
+            <span class="tl-type" data-i18n="exp1.type">Mission</span>
+          </div>
+          <h3 data-i18n="exp1.role">Chargé de mission – Caractérisation de déchets</h3>
+          <p class="tl-company"><i class="fa-solid fa-building"></i> <span data-i18n="exp1.company">OPTAE France</span></p>
+          <p data-i18n="exp1.desc">
+            Pilotage d'une campagne de caractérisation des déchets ménagers et assimilés à l'échelle d'un territoire de
+            51 communes, de la conception des protocoles à l'analyse spatiale des résultats.
+          </p>
+          <ul>
+            <li data-i18n="exp1.b1">Élaboration et déploiement des protocoles de caractérisation (échantillonnage, tri, classification par catégories) sur 51 communes.</li>
+            <li data-i18n="exp1.b2">Tri, classification et quantification des flux de déchets ; consolidation des résultats en indicateurs de composition et de gisement.</li>
+            <li data-i18n="exp1.b3">Structuration, nettoyage et analyse des données terrain pour produire des bilans fiables et exploitables par les décideurs.</li>
+            <li data-i18n="exp1.b4">Analyse cartographique SIG des résultats : répartition spatiale des gisements, cartes thématiques et supports d'aide à la décision.</li>
+          </ul>
+          <div class="tags">
+            <span>Caractérisation</span><span>Déchets</span><span>SIG</span><span>Analyse de données</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Expérience 2 : Eramet Ideas -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><i class="fa-solid fa-flask-vial"></i></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-period" data-i18n="exp2.period">2025</span>
+            <span class="tl-type" data-i18n="exp2.type">R&amp;D – Métallurgie</span>
+          </div>
+          <h3 data-i18n="exp2.role">Ingénieur procédés – Valorisation de résidus de manganèse</h3>
+          <p class="tl-company"><i class="fa-solid fa-building"></i> <span data-i18n="exp2.company">Eramet Ideas</span></p>
+          <p data-i18n="exp2.desc">
+            Étude de valorisation de résidus de manganèse au sein du centre de recherche d'Eramet : caractérisation
+            complète de la matière et essais de séparation physique pour identifier les voies de récupération du manganèse.
+          </p>
+          <ul>
+            <li data-i18n="exp2.b1">Caractérisation granulométrique, chimique et minéralogique des résidus pour établir le bilan de déportement du manganèse par fraction.</li>
+            <li data-i18n="exp2.b2">Réalisation d'essais de séparation gravimétrique et magnétique et évaluation des performances (teneur, récupération, rendement massique).</li>
+            <li data-i18n="exp2.b3">Préparation d'échantillons représentatifs : broyage, séchage, quartage et tamisage humide.</li>
+            <li data-i18n="exp2.b4">Division de pulpe à l'hydrocyclone et au diviseur ; suivi des bilans matière et interprétation des résultats.</li>
+          </ul>
+          <div class="tags">
+            <span>Minéralurgie</span><span>Gravimétrie</span><span>Séparation magnétique</span><span>Caractérisation</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Expérience 3 : ARRDEL -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-period" data-i18n="exp3.period">2024</span>
+            <span class="tl-type" data-i18n="exp3.type">Géomatique</span>
+          </div>
+          <h3 data-i18n="exp3.role">Géomaticien Cartographe</h3>
+          <p class="tl-company"><i class="fa-solid fa-building"></i> <span data-i18n="exp3.company">Groupe ARRDEL</span></p>
+          <p data-i18n="exp3.desc">
+            Conception d'outils cartographiques et de collecte de données pour la plateforme ArrdelBee du groupe ARRDEL,
+            et formation des équipes aux outils géomatiques.
+          </p>
+          <ul>
+            <li data-i18n="exp3.b1">Conception et mise en place d'un module de Web Mapping intégré à la plateforme ArrdelBee.</li>
+            <li data-i18n="exp3.b2">Réalisation de formulaires numériques pour les enquêtes terrain et structuration des données collectées.</li>
+            <li data-i18n="exp3.b3">Production de cartes thématiques pour l'analyse et la communication des résultats.</li>
+            <li data-i18n="exp3.b4">Formation en cartographie et en pilotage de drone.</li>
+          </ul>
+          <div class="tags">
+            <span>Web Mapping</span><span>QGIS / ArcGIS</span><span>Enquêtes terrain</span><span>Drone</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Expérience 4 : Jindal Steel -->
+      <article class="tl-item reveal">
+        <div class="tl-marker"><i class="fa-solid fa-mountain"></i></div>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-period" data-i18n="exp4.period">2023</span>
+            <span class="tl-type" data-i18n="exp4.type">Stage</span>
+          </div>
+          <h3 data-i18n="exp4.role">Stagiaire géologue – Gisement de fer</h3>
+          <p class="tl-company"><i class="fa-solid fa-building"></i> <span data-i18n="exp4.company">Jindal Steel</span></p>
+          <p data-i18n="exp4.desc">
+            Stage de géologie d'exploration sur un gisement de fer : acquisition et interprétation des données de forage
+            en appui à l'évaluation de la ressource.
+          </p>
+          <ul>
+            <li data-i18n="exp4.b1">Core logging détaillé des carottes de forage (lithologie, minéralisation, altération, structures).</li>
+            <li data-i18n="exp4.b2">Échantillonnage minéralogique des carottes et préparation des échantillons pour analyse.</li>
+            <li data-i18n="exp4.b3">Cartographie des puits de forage et intégration des données dans la base de données du gisement.</li>
+          </ul>
+          <div class="tags">
+            <span>Core logging</span><span>Géologie minière</span><span>Échantillonnage</span><span>Cartographie</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. PROJETS ACADÉMIQUES & PERSONNELS
+     ============================================================ -->
+<section id="projets" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="proj.label">Projets académiques &amp; personnels</span>
+      <h2 class="section-title" data-i18n="proj.title">Modéliser pour mieux valoriser</h2>
+      <p class="section-intro" data-i18n="proj.intro">
+        Trois projets qui illustrent ma démarche : caractériser la matière, modéliser les séparations, optimiser les circuits.
+      </p>
+    </div>
+
+    <!-- Projet 1 : Simulateur géométallurgique Python -->
+    <article class="project reveal">
+      <div class="project-body">
+        <div class="project-icon"><i class="fa-brands fa-python"></i></div>
+        <h3 data-i18n="proj1.title">Simulateur géométallurgique en Python</h3>
+        <p data-i18n="proj1.desc">
+          Développement d'un simulateur géométallurgique en Python permettant de modéliser des opérations de séparation
+          (gravimétrique, magnétique, classification) et de les assembler en circuits de traitement complets. L'outil
+          relie les caractéristiques de la matière (distribution granulométrique, teneurs par fraction, propriétés
+          physiques) aux performances attendues de chaque unité.
+        </p>
+        <p data-i18n="proj1.d2">
+          Le simulateur calcule les bilans matière et métal, les courbes de partage et de récupération, et permet de
+          comparer rapidement plusieurs configurations de flowsheet. Il constitue une base pour des études de sensibilité
+          et pour l'optimisation de circuits avant essais pilotes.
+        </p>
+        <ul class="project-points">
+          <li data-i18n="proj1.b1">Modélisation des séparations par courbes de partage et modèles de performance</li>
+          <li data-i18n="proj1.b2">Construction et simulation de circuits de traitement (flowsheets) avec recirculation</li>
+          <li data-i18n="proj1.b3">Bilans matière / métal et calcul des indicateurs (teneur, récupération, rendement)</li>
+          <li data-i18n="proj1.b4">Python – NumPy, pandas, Matplotlib</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>Géométallurgie</span><span>Simulation</span><span>Flowsheet</span></div>
+      </div>
+      <div class="project-figures">
+        <!-- ENCART 1 : schéma du circuit -->
+        <figure class="figure-slot">
+          <img src="images/projets/simulateur-flowsheet.png" alt="Schéma du circuit de traitement simulé">
+          <figcaption data-i18n="proj1.fig1">Schéma du circuit simulé (flowsheet)</figcaption>
+        </figure>
+        <!-- ENCART 2 : courbes de récupération -->
+        <figure class="figure-slot">
+          <img src="images/projets/simulateur-courbes.png" alt="Courbes de récupération issues du simulateur">
+          <figcaption data-i18n="proj1.fig2">Courbes de récupération / partage issues du simulateur</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Projet 2 : Jumeau numérique DEEE -->
+    <article class="project project-reverse reveal">
+      <div class="project-body">
+        <div class="project-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3 data-i18n="proj2.title">Jumeau numérique d'un centre de tri DEEE (MATLAB/Simulink)</h3>
+        <p data-i18n="proj2.desc">
+          Modélisation dynamique d'un centre de tri de déchets d'équipements électriques et électroniques (DEEE) sous
+          MATLAB/Simulink. Le jumeau numérique reproduit la chaîne de traitement (démantèlement, broyage, séparations
+          physiques, tri) et permet de suivre les flux de matières et de composants à travers les différentes unités.
+        </p>
+        <p data-i18n="proj2.d2">
+          L'outil sert à tester des scénarios d'exploitation (variation des flux entrants, réglages des séparateurs,
+          goulots d'étranglement) et à estimer les taux de récupération des fractions valorisables : métaux ferreux,
+          non ferreux, plastiques, cartes électroniques.
+        </p>
+        <ul class="project-points">
+          <li data-i18n="proj2.b1">Modélisation des flux et des unités de tri sous Simulink</li>
+          <li data-i18n="proj2.b2">Scénarios de fonctionnement et analyse des goulots d'étranglement</li>
+          <li data-i18n="proj2.b3">Estimation des taux de récupération par fraction</li>
+          <li data-i18n="proj2.b4">MATLAB / Simulink</li>
+        </ul>
+        <div class="tags"><span>MATLAB</span><span>Simulink</span><span>DEEE</span><span>Jumeau numérique</span></div>
+      </div>
+      <div class="project-figures">
+        <figure class="figure-slot">
+          <img src="images/projets/deee-schema-bloc.png" alt="Schéma-bloc du jumeau numérique du centre de tri DEEE">
+          <figcaption data-i18n="proj2.fig1">Schéma-bloc du jumeau numérique</figcaption>
+        </figure>
+        <figure class="figure-slot">
+          <img src="images/projets/deee-resultats.png" alt="Résultats de simulation du centre de tri DEEE">
+          <figcaption data-i18n="proj2.fig2">Résultats de simulation (flux, taux de récupération)</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Projet 3 : Andalousite -->
+    <article class="project reveal">
+      <div class="project-body">
+        <div class="project-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3 data-i18n="proj3.title">Optimisation d'un procédé de traitement de l'andalousite (GeoRessources)</h3>
+        <p data-i18n="proj3.desc">
+          Projet mené au laboratoire GeoRessources (Nancy) sur l'optimisation d'un procédé de traitement de
+          l'andalousite. L'étude a combiné la caractérisation de la matière et des essais de séparation afin
+          d'améliorer la qualité du concentré et la récupération de l'andalousite.
+        </p>
+        <p data-i18n="proj3.d2">
+          Le travail a porté sur l'identification des paramètres influents du procédé, la réalisation d'essais
+          comparatifs et l'interprétation des résultats par bilans matière, dans une logique d'optimisation du flowsheet.
+        </p>
+        <ul class="project-points">
+          <li data-i18n="proj3.b1">Caractérisation minéralogique et granulométrique de l'alimentation</li>
+          <li data-i18n="proj3.b2">Essais de séparation et étude paramétrique</li>
+          <li data-i18n="proj3.b3">Bilans matière et analyse des performances (teneur / récupération)</li>
+          <li data-i18n="proj3.b4">Traitement de données et visualisation des résultats</li>
+        </ul>
+        <div class="tags"><span>Andalousite</span><span>Minéralurgie</span><span>Optimisation</span><span>GeoRessources</span></div>
+      </div>
+      <div class="project-figures">
+        <figure class="figure-slot">
+          <img src="images/projets/andalousite-essais.png" alt="Résultats d'essais métallurgiques sur l'andalousite">
+          <figcaption data-i18n="proj3.fig1">Résultats d'essais métallurgiques</figcaption>
+        </figure>
+        <figure class="figure-slot">
+          <img src="images/projets/andalousite-courbe.png" alt="Courbe teneur-récupération de l'andalousite">
+          <figcaption data-i18n="proj3.fig2">Courbe teneur – récupération</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Encarts libres : résultats & visualisations -->
+    <div class="results-block reveal">
+      <h3 class="results-title" data-i18n="results.title">Résultats &amp; visualisations</h3>
+      <p class="results-intro" data-i18n="results.intro">
+        Encarts prévus pour mes graphiques, courbes de récupération, cartes SIG et résultats d'essais métallurgiques.
+      </p>
+      <div class="results-grid">
+        <figure class="figure-slot">
+          <img src="images/resultats/graphique-1.png" alt="Graphique de résultats">
+          <figcaption><i class="fa-solid fa-chart-column"></i> <span data-i18n="results.r1">Graphiques</span></figcaption>
+        </figure>
+        <figure class="figure-slot">
+          <img src="images/resultats/courbe-recuperation.png" alt="Courbe de récupération">
+          <figcaption><i class="fa-solid fa-chart-line"></i> <span data-i18n="results.r2">Courbes de récupération</span></figcaption>
+        </figure>
+        <figure class="figure-slot">
+          <img src="images/resultats/carte-sig.png" alt="Carte SIG">
+          <figcaption><i class="fa-solid fa-map"></i> <span data-i18n="results.r3">Cartes SIG</span></figcaption>
+        </figure>
+        <figure class="figure-slot">
+          <img src="images/resultats/essais-metallurgiques.png" alt="Résultats d'essais métallurgiques">
+          <figcaption><i class="fa-solid fa-vial"></i> <span data-i18n="results.r4">Résultats d'essais métallurgiques</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. GALERIE PHOTOS
+     ============================================================ -->
+<section id="galerie" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="gallery.label">Galerie photos</span>
+      <h2 class="section-title" data-i18n="gallery.title">En images</h2>
+      <p class="section-intro" data-i18n="gallery.intro">
+        Laboratoire, essais métallurgiques, caractérisation, terrain et résultats scientifiques.
+      </p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="gallery-filters reveal" role="group" aria-label="Filtres de la galerie">
+      <button type="button" class="filter-btn active" data-filter="all" data-i18n="gallery.f_all">Tous</button>
+      <button type="button" class="filter-btn" data-filter="labo" data-i18n="gallery.f_lab">Laboratoire</button>
+      <button type="button" class="filter-btn" data-filter="essais" data-i18n="gallery.f_tests">Essais métallurgiques</button>
+      <button type="button" class="filter-btn" data-filter="caracterisation" data-i18n="gallery.f_charac">Caractérisation</button>
+      <button type="button" class="filter-btn" data-filter="terrain" data-i18n="gallery.f_field">Terrain / déchets</button>
+      <button type="button" class="filter-btn" data-filter="resultats" data-i18n="gallery.f_results">Résultats scientifiques</button>
+    </div>
+
+    <!-- Chaque <figure> = une photo. Modifier src, alt et la légende (figcaption). -->
+    <div class="gallery-grid reveal">
+      <figure class="gallery-item" data-cat="labo">
+        <img src="images/galerie/labo-01.jpg" alt="Travail en laboratoire" loading="lazy">
+        <figcaption data-i18n="gallery.c1">Préparation d'échantillons au laboratoire</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="labo">
+        <img src="images/galerie/labo-02.jpg" alt="Tamisage humide" loading="lazy">
+        <figcaption data-i18n="gallery.c2">Tamisage humide et division de pulpe</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="essais">
+        <img src="images/galerie/essais-01.jpg" alt="Essai de séparation gravimétrique" loading="lazy">
+        <figcaption data-i18n="gallery.c3">Essai de séparation gravimétrique</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="essais">
+        <img src="images/galerie/essais-02.jpg" alt="Séparation magnétique" loading="lazy">
+        <figcaption data-i18n="gallery.c4">Séparation magnétique – banc d'essai</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="caracterisation">
+        <img src="images/galerie/caracterisation-01.jpg" alt="Granulométrie laser" loading="lazy">
+        <figcaption data-i18n="gallery.c5">Caractérisation granulométrique (granulométrie laser)</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="caracterisation">
+        <img src="images/galerie/caracterisation-02.jpg" alt="Analyse DRX / MEB" loading="lazy">
+        <figcaption data-i18n="gallery.c6">Analyse minéralogique (DRX / MEB)</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="terrain">
+        <img src="images/galerie/terrain-01.jpg" alt="Campagne de caractérisation de déchets" loading="lazy">
+        <figcaption data-i18n="gallery.c7">Campagne de caractérisation de déchets sur le terrain</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="terrain">
+        <img src="images/galerie/terrain-02.jpg" alt="Tri des flux de déchets" loading="lazy">
+        <figcaption data-i18n="gallery.c8">Tri et classification des flux de déchets</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="resultats">
+        <img src="images/galerie/resultats-01.jpg" alt="Courbes de récupération" loading="lazy">
+        <figcaption data-i18n="gallery.c9">Courbes de récupération – résultats d'essais</figcaption>
+      </figure>
+      <figure class="gallery-item" data-cat="resultats">
+        <img src="images/galerie/resultats-02.jpg" alt="Carte thématique SIG" loading="lazy">
+        <figcaption data-i18n="gallery.c10">Carte thématique SIG des résultats</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Visionneuse (lightbox) de la galerie -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visionneuse">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+  <figure class="lb-figure">
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- ============================================================
+     6. COMPÉTENCES
+     ============================================================ -->
+<section id="competences" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="skills.label">Compétences</span>
+      <h2 class="section-title" data-i18n="skills.title">De la matière au modèle</h2>
+      <p class="section-intro" data-i18n="skills.intro">
+        Un socle technique complet : caractériser, préparer, séparer, puis modéliser et optimiser, avec les outils
+        numériques et géomatiques adaptés.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-flask"></i></div>
+        <h3 data-i18n="skills.c1_title">Minéralurgie &amp; hydrométallurgie</h3>
+        <p data-i18n="skills.c1_desc">Concentration gravimétrique et magnétique, classification, lixiviation et extraction hydrométallurgique, bilans matière et métal, conception de flowsheets.</p>
+        <div class="tags">
+          <span data-i18n="skills.c1_t1">Gravimétrie</span><span data-i18n="skills.c1_t2">Séparation magnétique</span>
+          <span data-i18n="skills.c1_t3">Hydrocyclone</span><span data-i18n="skills.c1_t4">Lixiviation</span><span data-i18n="skills.c1_t5">Bilans matière</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-microscope"></i></div>
+        <h3 data-i18n="skills.c2_title">Caractérisation</h3>
+        <p data-i18n="skills.c2_desc">Analyse granulométrique, minéralogique et chimique des matières premières, résidus et déchets, du gisement au laboratoire.</p>
+        <div class="tags">
+          <span data-i18n="skills.c2_t1">Granulométrie laser</span><span>DRX</span><span>MEB</span>
+          <span>Core logging</span><span data-i18n="skills.c2_t5">Caractérisation de déchets</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+        <h3 data-i18n="skills.c3_title">Préparation de la matière</h3>
+        <p data-i18n="skills.c3_desc">Constitution d'échantillons représentatifs et préparation des lots d'essai selon les bonnes pratiques d'échantillonnage.</p>
+        <div class="tags">
+          <span data-i18n="skills.c3_t1">Broyage</span><span data-i18n="skills.c3_t2">Séchage</span><span data-i18n="skills.c3_t3">Quartage</span>
+          <span data-i18n="skills.c3_t4">Tamisage humide</span><span data-i18n="skills.c3_t5">Division de pulpe</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-sliders"></i></div>
+        <h3 data-i18n="skills.c4_title">Optimisation &amp; modélisation de procédés</h3>
+        <p data-i18n="skills.c4_desc">Simulation de circuits, étude paramétrique, analyse statistique des essais et construction de jumeaux numériques.</p>
+        <div class="tags">
+          <span data-i18n="skills.c4_t1">Simulation de circuits</span><span data-i18n="skills.c4_t2">Courbes de partage</span>
+          <span data-i18n="skills.c4_t3">Plans d'expériences</span><span data-i18n="skills.c4_t4">Jumeau numérique</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3 data-i18n="skills.c5_title">Outils numériques</h3>
+        <p data-i18n="skills.c5_desc">Programmation scientifique, simulation de procédés et analyse statistique.</p>
+        <div class="tags">
+          <span>Python</span><span>MATLAB / Simulink</span><span>UsimPac / Bilco</span><span>JMP</span><span>NumPy / pandas</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-earth-africa"></i></div>
+        <h3 data-i18n="skills.c6_title">Géomatique &amp; cartographie</h3>
+        <p data-i18n="skills.c6_desc">Structuration, analyse spatiale et restitution cartographique des données terrain.</p>
+        <div class="tags">
+          <span>QGIS / ArcGIS</span><span>Web Mapping</span><span data-i18n="skills.c6_t3">Cartes thématiques</span>
+          <span data-i18n="skills.c6_t4">Enquêtes terrain</span><span>Drone</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. DIPLÔMES & FORMATIONS
+     ============================================================ -->
+<section id="formation" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="edu.label">Diplômes &amp; formations</span>
+      <h2 class="section-title" data-i18n="edu.title">Formation d'ingénieur, spécialisation géoressources</h2>
+    </div>
+
+    <div class="edu-grid">
+      <!-- MODIFIER : vérifier / ajuster les années -->
+      <article class="edu-card reveal">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span class="edu-period" data-i18n="edu1.period">2024 – 2026</span>
+        <h3 data-i18n="edu1.degree">Master Georessources Engineering</h3>
+        <p class="edu-school"><i class="fa-solid fa-school"></i> <span data-i18n="edu1.school">ENSG Nancy – École nationale supérieure de géologie, Université de Lorraine</span></p>
+        <p data-i18n="edu1.desc">
+          Formation d'ingénierie des géoressources orientée vers la caractérisation, le traitement et la valorisation
+          des ressources minérales primaires et secondaires, avec une forte composante géométallurgie, hydrométallurgie
+          et modélisation des procédés.
+        </p>
+        <ul>
+          <li data-i18n="edu1.b1">Géométallurgie et traitement des minerais</li>
+          <li data-i18n="edu1.b2">Hydrométallurgie et valorisation des ressources secondaires</li>
+          <li data-i18n="edu1.b3">Modélisation et simulation de procédés (Python, UsimPac / Bilco)</li>
+        </ul>
+      </article>
+
+      <article class="edu-card reveal reveal-delay">
+        <div class="edu-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+        <span class="edu-period" data-i18n="edu2.period">2018 – 2023</span>
+        <h3 data-i18n="edu2.degree">Diplôme d'Ingénieur des Mines</h3>
+        <p class="edu-school"><i class="fa-solid fa-school"></i> <span data-i18n="edu2.school">ENSP Bamenda – École Nationale Supérieure Polytechnique, Université de Bamenda</span></p>
+        <p data-i18n="edu2.desc">
+          Formation d'ingénieur généraliste en ingénierie des mines couvrant la géologie, l'exploration, l'exploitation
+          minière, le traitement des minerais et la gestion de projets miniers.
+        </p>
+        <ul>
+          <li data-i18n="edu2.b1">Géologie et exploration minière</li>
+          <li data-i18n="edu2.b2">Exploitation minière et traitement des minerais</li>
+          <li data-i18n="edu2.b3">Topographie, cartographie et SIG</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. CONTACT
+     ============================================================ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label" data-i18n="contact.label">Contact</span>
+      <h2 class="section-title" data-i18n="contact.title">Travaillons ensemble</h2>
+      <p class="section-intro" data-i18n="contact.intro">
+        Vous recrutez dans le traitement des minerais, l'hydrométallurgie, la valorisation des ressources secondaires ou
+        la géomatique ? Discutons de votre projet.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Formulaire : remplacer YOUR_FORM_ID par votre identifiant Formspree (voir README).
+           Tant qu'il n'est pas remplacé, l'envoi ouvre votre messagerie (mailto). -->
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name" data-i18n="contact.name">Nom</label>
+            <input type="text" id="name" name="name" required autocomplete="name" data-i18n-placeholder="contact.name_ph" placeholder="Votre nom">
+          </div>
+          <div class="form-field">
+            <label for="email" data-i18n="contact.email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.email_ph" placeholder="votre@email.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="subject" data-i18n="contact.subject">Objet</label>
+          <input type="text" id="subject" name="subject" required data-i18n-placeholder="contact.subject_ph" placeholder="Objet de votre message">
+        </div>
+        <div class="form-field">
+          <label for="message" data-i18n="contact.message">Message</label>
+          <textarea id="message" name="message" rows="6" required data-i18n-placeholder="contact.message_ph" placeholder="Votre message…"></textarea>
+        </div>
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact.send">Envoyer le message</span>
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-side reveal reveal-delay">
+        <h3 data-i18n="contact.side_title">Me retrouver</h3>
+        <p data-i18n="contact.side_text">Réponse sous 48 h. Ouvert aux opportunités en France et à l'international.</p>
+        <!-- MODIFIER : vos liens -->
+        <a class="contact-link" href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <span><strong>LinkedIn</strong><small data-i18n="contact.linkedin">Profil professionnel</small></span>
+        </a>
+        <a class="contact-link" href="https://github.com/fabrice-py" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <span><strong>GitHub</strong><small data-i18n="contact.github">Simulateur &amp; projets Python</small></span>
+        </a>
+        <a class="contact-link" href="mailto:votre.email@exemple.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span><strong>Email</strong><small data-i18n="contact.email_btn">M'écrire directement</small></span>
+        </a>
+        <a class="contact-link" href="cv/CV_Fabrice_TSAMO.pdf" download>
+          <i class="fa-solid fa-file-pdf"></i>
+          <span><strong>CV</strong><small data-i18n="contact.cv">Télécharger le PDF</small></span>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     PIED DE PAGE
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <p>© <span id="year"></span> Fabrice TSAMO — <span data-i18n="footer.text">Ingénieur procédés · Valorisation des matières premières secondaires</span></p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/fabrice-py" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:votre.email@exemple.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bouton retour en haut -->
+<button type="button" class="to-top" id="toTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Script du site (traductions, navigation, galerie, formulaire) -->
+<script src="script.js"></script>
+</body>
+</html>
