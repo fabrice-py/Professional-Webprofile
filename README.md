@@ -1,8 +1,7 @@
 # Site web professionnel – Fabrice TSAMO
 
-Site vitrine bilingue (**français / anglais**, bascule FR | EN dans l'en-tête), moderne et responsive,
-destiné aux recruteurs dans les domaines du traitement des minerais, de l'hydrométallurgie, de la
-valorisation des ressources secondaires, de la caractérisation de déchets, de l'ingénierie des mines et du SIG.
+Site vitrine bilingue, destiné aux recruteurs dans les domaines du traitement des minerais, de l'hydrométallurgie, de la
+valorisation des ressources secondaires, de la caractérisation de déchets, de l'ingénierie des mines et des SIG.
 
 ## Structure du projet
 
