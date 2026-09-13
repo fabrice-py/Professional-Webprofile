@@ -556,10 +556,39 @@ function initNavigation() {
     const open = nav.classList.toggle("open");
     burger.setAttribute("aria-expanded", open ? "true" : "false");
   });
-  links.forEach((a) => a.addEventListener("click", () => {
+  const closeMenu = () => {
     nav.classList.remove("open");
     burger.setAttribute("aria-expanded", "false");
-  }));
+  };
+
+  // Défilement vers une section (barre de navigation, boutons, "Découvrir", logo)
+  // en tenant compte de la hauteur de l'en-tête fixe.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollToSection = (id, instant) => {
+    const target = document.getElementById(id);
+    if (!target) return false;
+    const top = id === "accueil" ? 0 : target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+    window.scrollTo({ top: Math.max(0, top), behavior: instant || reduceMotion ? "auto" : "smooth" });
+    return true;
+  };
+  document.querySelectorAll("a[href^='#']").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href").slice(1);
+      if (!id) return;
+      if (scrollToSection(id)) {
+        e.preventDefault();
+        closeMenu();
+        if (history.replaceState) history.replaceState(null, "", "#" + id);
+      }
+    });
+  });
+  // Ancre présente dans l'URL à l'ouverture (ex. site.html#projets) : on repositionne
+  // après le chargement complet pour tenir compte de l'en-tête fixe.
+  if (location.hash.length > 1) {
+    const goToHash = () => scrollToSection(location.hash.slice(1), true);
+    if (document.readyState === "complete") setTimeout(goToHash, 0);
+    else window.addEventListener("load", () => setTimeout(goToHash, 0), { once: true });
+  }
 
   // Ombre de l'en-tête + bouton retour en haut
   const onScroll = () => {
